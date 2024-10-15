@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-bar {
+    width: 100%; /* Mengisi lebar penuh */
+    background-color: #007bff; /* Warna latar belakang top bar */
+    color: #ffffff; /* Warna teks */
+    text-align: center; /* Teks berada di tengah */
+    padding: 30px 30px; /* Spasi atas dan bawah */
+    margin-bottom: 20px; /* Spasi bawah dari top bar */
+}
+
+.table-container {
+    width: 80%; /* Atur lebar tabel sesuai kebutuhan */
+    max-height: 400px; /* Atur tinggi maksimum sesuai kebutuhan */
+    overflow-y: auto; /* Menambahkan scroll vertikal jika konten melebihi tinggi */
+    border: 1px solid #ccc; /* Tambahkan border jika perlu */
+    margin-bottom: 3f0px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Menghapus jarak antara border sel */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd; /* Tambahkan border pada sel */
+}
+
+
+h2, h3 {
+    color: #007bff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 300px;
+    padding: 10px;
+}
+
+li {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+canvas {
+    max-width: 100%;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.data-row {
+    display: flex; /* Mengatur elemen dalam satu baris */
+    justify-content: space-between; /* Memberikan ruang antar item */
+    margin-bottom: 15px; /* Spasi antar baris */
+}
+
+.data-item {
+    /* Setiap item mengisi ruang yang sama */
+    padding: 5px; /* Memberikan sedikit ruang di dalam item */
+    border: 1px solid #ccc; /* Border untuk setiap item */
+    border-radius: 5px; /* Sudut membulat untuk border */
+    background-color: #f9f9f9; /* Latar belakang item */
+    text-align: center; /* Teks berada di tengah */
+    margin-right: 10px; /* Spasi kanan antar item */
+}
+
+.data-item:last-child {
+    margin-right: 0; /* Menghapus margin kanan pada item terakhir */
+}
+
+.chart {
+    width: 1500px; /* Atur lebar sesuai keinginan */
+    height: 700px; /* Atur tinggi sesuai keinginan */
+    margin: 10px auto; /* Margin atas/bawah 10px dan tengah secara horizontal */
+    border: 2px solid #007bff; /* Border jika perlu */
+    border-radius: 8px; /* Sudut membulat */
+    background-color: #ffffff; /* Warna latar belakang */
+}
+
+.frequency-distribution {
+    margin: 20px auto; /* Mengatur margin atas/bawah dan memusatkan div */
+    padding: 10px; /* Memberikan ruang di dalam div */
+    border: 1px solid #007bff; /* Border untuk div */
+    border-radius: 8px; /* Sudut membulat */
+    background-color: #f9f9f9; /* Warna latar belakang */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+}
+
+.team-introduction { /* Dark background for the introduction section */
+    padding: 20px; /* Padding for spacing */
+    border-radius: 20px; /* Rounded corners */
+    color: #ffffff; /* White text color */
+    text-align: center; /* Center text */
+    margin-bottom: 0px; /* Margin below the section */
+}
+
+.team-introduction-text {
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffd369; /* Space below the title */
+}
+.team-introduction-text-team {
+    font-size: 80px;
+    font-weight: 700;
+    color: #000000; /* Space below the title */
+}
+
+.team-members {
+    display: flex;
+    flex-direction: row; /* Row for horizontal layout */
+    justify-content: center; /* Center the members */
+    flex-wrap: wrap; /* Allow wrapping if there's not enough space */
+}
+
+.member {
+    display: flex;
+    flex-direction: column; /* Arrange photo above name and NPM */
+    align-items: center; /* Center the items horizontally */
+    background-color: #ffffff; /* White background for member cards */
+    border-radius: 8px; /* Rounded corners for member cards */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 10px;
+    margin: 12px; /* Space between members */
+    width: 300px; /* Width of member cards */
+}
+
+.member-photo {
+    width: 200px; /* Photo width */
+    height: 200px; /* Photo height */
+    border-radius: 10%; /* Round photo */
+    margin-bottom: 10px; /* Space between photo and info */
+}
+
+.member-info h3 {
+    margin: 0; /* Remove default margin */
+    color: #000000; /* Name color */
+}
+
+.member-info p {
+    margin: 8px 0 0; /* Margin for NPM */
+    color: #000000; /* NPM color */
+}
+.section-title {
+    color: #007bff; /* Color for the section titles */
+    margin: 20px 0 10px; /* Margin around the title */
+    font-size: 1.5em; /* Font size for titles */
+    text-align: center; /* Center-align titles */
+}
+.main-section-title {
+    font-size: 50px;
+    font-weight: 550;
+    color: #000000; /* Color for the section titles */
+    text-align: center; /* Center-align titles */
+}
+.main-section-title-type {
+    font-size: 70px;
+    font-weight: 550;
+    color: #ffd369; /* Color for the section titles */
+    text-align: center; /* Center-align titles */
+}
+
+.data-row {
+    display: flex; /* Display items in a row */
+    justify-content: space-around; /* Space evenly between items */
+    margin-bottom: 30px; /* Space below each data row */
+    padding: 15px; /* Padding inside data row */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.data-item {
+    padding: 10px; /* Padding for data items */
+    margin: 0 5px; /* Margin between items */
+    text-align: center; /* Center text in each item */
+    border: 1px solid #ffd369; /* Border color */
+    border-radius: 5px; /* Rounded corners for each item */
+    background-color: #ffffff; /* White background for data items */
+}
+
+.data-item:hover {
+    background-color: #e7f1ff; /* Light blue on hover for interactivity */
+    cursor: pointer; /* Change cursor on hover */
+}
+.dataname{
+    text-align: center;
+}
+
