@@ -25,14 +25,14 @@
                 </div>
             </div>
             <div class="member">
-                <img src="{{ asset('images/tsabit.png') }}" alt="Photo of {{ $teman2 }}" class="member-photo">
+                <img src="{{ asset('images/rilla.png') }}" alt="Photo of {{ $teman2 }}" class="member-photo">
                 <div class="member-info"> 
                     <h3>{{ $teman2 }}</h3>
                     <p>NPM: 23081010206</p> <!-- Ganti dengan NPM sebenarnya -->
                 </div>
             </div>
             <div class="member">
-                <img src="{{ asset('images/tsabit.png') }}" alt="Photo of {{ $teman3 }}" class="member-photo">
+                <img src="{{ asset('images/nuha.png') }}" alt="Photo of {{ $teman3 }}" class="member-photo">
                 <div class="member-info">
                     <h3>{{ $teman3 }}</h3>
                     <p>NPM: 23081010201</p> <!-- Ganti dengan NPM sebenarnya -->
@@ -144,30 +144,40 @@
 <div class="main-section-title">DISTRIBUSI FREKUENSI</div>
 <div class="main-section-title-type">KOMULATIF</div>
 <div class="frequency-distribution">
+
     <h3 class="dataname">Score Geo</h3>
     <canvas id="geoChart" class="chart"></canvas>
-
+    <img src="{{ asset('images/gambar5.png') }}" alt="" srcset="" class="image-handler">
     <h3 class="dataname">Score KPU</h3>
     <canvas id="kpuChart" class="chart"></canvas>
-
+    <img src="{{ asset('images/gambar6.png') }}" alt="" srcset="" class="image-handler">
+    
     <h3 class="dataname">Score PPU</h3>
     <canvas id="ppuChart" class="chart"></canvas>
-
+    <img src="{{ asset('images/gambar7.png') }}" alt="" srcset="" class="image-handler">
+    
     <h3 class="dataname">Score SEJ</h3>
     <canvas id="sejChart" class="chart"></canvas>
+    <img src="{{ asset('images/gambar8.png') }}" alt="" srcset="" class="image-handler">
 
 </div>
 <div class="main-section-title">DISTRIBUSI FREKUENSI</div>
 <div class="main-section-title-type">KOMULATIF</div>
 <div class="frequency-distribution">
-    <h3 class="dataname">Score Geo Percent</h3>
+    <h3 class="dataname">Score Geo</h3>
     <canvas id="geoChartPercent" class="chart"></canvas>
-    <h3 class="dataname">Score KPU Percent</h3>
+    <img src="{{ asset('images/gambar1.png') }}" alt="" srcset="" class="image-handler">
+    <h3 class="dataname">Score KPU</h3>
     <canvas id="kpuChartPercent" class="chart"></canvas>
-    <h3 class="dataname">Score PPU Percent</h3>
+    <img src="{{ asset('images/gambar2.png') }}" alt="" srcset="" class="image-handler">
+    
+    <h3 class="dataname">Score PPU</h3>
     <canvas id="ppuChartPercent" class="chart"></canvas>
-    <h3 class="dataname">Score SEJ Percent</h3>
+    <img src="{{ asset('images/gambar3.png') }}" alt="" srcset="" class="image-handler">
+    
+    <h3 class="dataname">Score SEJ</h3>
     <canvas id="sejChartPercent" class="chart"></canvas>
+    <img src="{{ asset('images/gambar4.png') }}" alt="" srcset="" class="image-handler">
 </div>
 
 

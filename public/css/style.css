@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    background-color: #cccccc;
     margin: 0;
     padding: 20px;
     display: flex;
@@ -21,19 +21,21 @@ body {
     width: 80%; /* Atur lebar tabel sesuai kebutuhan */
     max-height: 400px; /* Atur tinggi maksimum sesuai kebutuhan */
     overflow-y: auto; /* Menambahkan scroll vertikal jika konten melebihi tinggi */
-    border: 1px solid #ccc; /* Tambahkan border jika perlu */
+    border: 10px solid #ccc; /* Tambahkan border jika perlu */
     margin-bottom: 100px;
 }
 
 table {
-    width: 100%;
+    background-color: #ffffff; /* Latar belakang tabel putih */
+    width: 100%; /* Atur lebar tabel */
     border-collapse: collapse; /* Menghapus jarak antara border sel */
 }
 
 th, td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd; /* Tambahkan border pada sel */
+    background-color: #ffffff; /* Latar belakang setiap sel */
+    padding: 10px; /* Spasi dalam sel */
+    text-align: left; /* Penyesuaian teks */
+    border: 1px solid #ddd; /* Border pada sel */
 }
 
 
@@ -206,4 +208,10 @@ canvas {
     font-size: 30px;
 
 }
-
+.image-handler {
+    display: block; /* Agar gambar dianggap sebagai elemen blok */
+    max-width: 100%; /* Maksimal lebar gambar 100% dari elemen induk */
+    height: auto; /* Pertahankan rasio aspek gambar */
+    margin: 20px auto; /* Pusatkan gambar secara horizontal dan berikan margin atas-bawah */
+    border-radius: 10px; /* Tambahkan sudut membulat jika diinginkan */
+}
