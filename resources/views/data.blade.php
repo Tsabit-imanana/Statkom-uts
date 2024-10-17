@@ -70,38 +70,39 @@
 <div class="main-section-title-type">MEAN</div>
 <div class="data-row">
     <img src="{{ asset('images/mean.png') }}" alt="" srcset="">
-    <div class="data-item">Score Geo: {{ $results['geo']['mean'] }}</div>
-    <div class="data-item">Score KPU: {{ $results['kpu']['mean'] }}</div>
-    <div class="data-item">Score PPU: {{ $results['ppu']['mean'] }}</div>
-    <div class="data-item">Score Sej: {{ $results['sej']['mean'] }}</div>
+    <div class="data-item"><p>Score Geo:</p> <p>{{ $results['geo']['mean'] }}</p></div>
+    <div class="data-item"><p>Score KPU:</p> <p>{{ $results['kpu']['mean'] }}</p></div>
+    <div class="data-item"><p>Score PPU:</p> <p>{{ $results['ppu']['mean'] }}</p></div>
+    <div class="data-item"><p>Score Sej:</p> <p>{{ $results['sej']['mean'] }}</p></div>
+
 </div>
 
 <div class="main-section-title">PENGOLAHAN DATA</div>
 <div class="main-section-title-type">MODUS</div>
 <div class="data-row">
     <img src="{{ asset('images/modus.png') }}" alt="" srcset="">
-    <div class="data-item">Score Geo: 
+    <div class="data-item"> <p>Score Geo:</p>
         @if (count($results['geo']['mode']) > 1)
             {{ implode(', ', $results['geo']['mode']) }}
         @else
             {{ $results['geo']['mode'][0] }}
         @endif
     </div>
-    <div class="data-item">Score KPU: 
+    <div class="data-item"><p>Score KPU: </p>
         @if (count($results['kpu']['mode']) > 1)
             {{ implode(', ', $results['kpu']['mode']) }}
         @else
             {{ $results['kpu']['mode'][0] }}
         @endif
     </div>
-    <div class="data-item">Score PPU: 
+    <div class="data-item"><p>Score PPU: </p>
         @if (count($results['ppu']['mode']) > 1)
             {{ implode(', ', $results['ppu']['mode']) }}
         @else
             {{ $results['ppu']['mode'][0] }}
         @endif
     </div>
-    <div class="data-item">Score Sej: 
+    <div class="data-item"><p>Score Sej: </p>
         @if (count($results['sej']['mode']) > 1)
             {{ implode(', ', $results['sej']['mode']) }}
         @else
@@ -114,34 +115,34 @@
 <div class="main-section-title-type">MEDIAN</div>
 <div class="data-row">
     <img src="{{ asset('images/median.png') }}" alt="" srcset="">
-    <div class="data-item">Score Geo: {{ $results['geo']['median'] }}</div>
-    <div class="data-item">Score KPU: {{ $results['kpu']['median'] }}</div>
-    <div class="data-item">Score PPU: {{ $results['ppu']['median'] }}</div>
-    <div class="data-item">Score Sej: {{ $results['sej']['median'] }}</div>
+    <div class="data-item"><p>Score Geo: </p> {{ $results['geo']['median'] }}</div>
+    <div class="data-item"><p>Score KPU: </p> {{ $results['kpu']['median'] }}</div>
+    <div class="data-item"><p>Score PPU: </p> {{ $results['ppu']['median'] }}</div>
+    <div class="data-item"><p>Score Sej: </p> {{ $results['sej']['median'] }}</div>
 </div>
 
 <div class="main-section-title">PENGOLAHAN DATA</div>
 <div class="main-section-title-type">VARIAN</div>
 <div class="data-row">
     <img src="{{ asset('images/VARIAN.png') }}" alt="" srcset="">
-    <div class="data-item">Score Geo: {{ $results['geo']['variance'] }}</div>
-    <div class="data-item">Score KPU: {{ $results['kpu']['variance'] }}</div>
-    <div class="data-item">Score PPU: {{ $results['ppu']['variance'] }}</div>
-    <div class="data-item">Score Sej: {{ $results['sej']['variance'] }}</div>
+    <div class="data-item"><p>Score Geo: </p> {{ $results['geo']['variance'] }}</div>
+    <div class="data-item"><p>Score KPU: </p> {{ $results['kpu']['variance'] }}</div>
+    <div class="data-item"><p>Score PPU: </p> {{ $results['ppu']['variance'] }}</div>
+    <div class="data-item"><p>Score Sej: </p> {{ $results['sej']['variance'] }}</div>
 </div>
 
 <div class="main-section-title">PENGOLAHAN DATA</div>
 <div class="main-section-title-type">Standart deviasi</div>
 <div class="data-row">
     <img src="{{ asset('images/STRDEV.png') }}" alt="" srcset="">
-    <div class="data-item">Score Geo: {{ $results['geo']['stdDev'] }}</div>
-    <div class="data-item">Score KPU: {{ $results['kpu']['stdDev'] }}</div>
-    <div class="data-item">Score PPU: {{ $results['ppu']['stdDev'] }}</div>
-    <div class="data-item">Score Sej: {{ $results['sej']['stdDev'] }}</div>
+    <div class="data-item"><p>Score Geo: </p> {{ $results['geo']['stdDev'] }}</div>
+    <div class="data-item"><p>Score KPU: </p> {{ $results['kpu']['stdDev'] }}</div>
+    <div class="data-item"><p>Score PPU: </p> {{ $results['ppu']['stdDev'] }}</div>
+    <div class="data-item"><p>Score Sej: </p> {{ $results['sej']['stdDev'] }}</div>
 </div>
 
-
-<h2>Distribusi Frekuensi Komulatif</h2> <!-- Keterangan di atas -->
+<div class="main-section-title">DISTRIBUSI FREKUENSI</div>
+<div class="main-section-title-type">KOMULATIF</div>
 <div class="frequency-distribution">
     <h3 class="dataname">Score Geo</h3>
     <canvas id="geoChart" class="chart"></canvas>
@@ -156,7 +157,8 @@
     <canvas id="sejChart" class="chart"></canvas>
 
 </div>
-<h2>Distribusi Frekuensi Komulatif (%)</h2> <!-- Keterangan di atas -->
+<div class="main-section-title">DISTRIBUSI FREKUENSI</div>
+<div class="main-section-title-type">KOMULATIF</div>
 <div class="frequency-distribution">
     <h3 class="dataname">Score Geo Percent</h3>
     <canvas id="geoChartPercent" class="chart"></canvas>

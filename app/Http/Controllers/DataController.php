@@ -16,6 +16,7 @@ class DataController extends Controller
  {
      // Mengambil semua data
      $data = Data::all();
+
  
      // Inisialisasi variabel untuk rata-rata, median, modus, varian, dan standar deviasi
      $scoresGeo = [];

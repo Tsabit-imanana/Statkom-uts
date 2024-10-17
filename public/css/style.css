@@ -22,7 +22,7 @@ body {
     max-height: 400px; /* Atur tinggi maksimum sesuai kebutuhan */
     overflow-y: auto; /* Menambahkan scroll vertikal jika konten melebihi tinggi */
     border: 1px solid #ccc; /* Tambahkan border jika perlu */
-    margin-bottom: 3f0px;
+    margin-bottom: 100px;
 }
 
 table {
@@ -107,7 +107,7 @@ canvas {
     border-radius: 20px; /* Rounded corners */
     color: #ffffff; /* White text color */
     text-align: center; /* Center text */
-    margin-bottom: 0px; /* Margin below the section */
+    margin-bottom: 20px; /* Margin below the section */
 }
 
 .team-introduction-text {
@@ -118,7 +118,8 @@ canvas {
 .team-introduction-text-team {
     font-size: 80px;
     font-weight: 700;
-    color: #000000; /* Space below the title */
+    color: #000000;
+    margin-bottom: 20px; /* Space below the title */
 }
 
 .team-members {
@@ -166,13 +167,15 @@ canvas {
     font-size: 50px;
     font-weight: 550;
     color: #000000; /* Color for the section titles */
-    text-align: center; /* Center-align titles */
+    text-align: center;
+    margin-top: 50px; /* Center-align titles */
 }
 .main-section-title-type {
     font-size: 70px;
     font-weight: 550;
     color: #ffd369; /* Color for the section titles */
-    text-align: center; /* Center-align titles */
+    text-align: center;
+    margin-bottom: px; /* Center-align titles */
 }
 
 .data-row {
@@ -200,5 +203,7 @@ canvas {
 }
 .dataname{
     text-align: center;
+    font-size: 30px;
+
 }
 
