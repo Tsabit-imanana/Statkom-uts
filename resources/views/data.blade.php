@@ -3,17 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Data Presentation of Kaggle Dataset UTBK Soshum 2019 - Kelompok 3">
     <title>Data Presentation</title>
     <!-- Tambahkan CDN untuk Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     <style>
-      
+
     </style>
 </head>
 <body>
-    <div class="team-introduction"> <!-- New wrapper div for dark background -->
+    <!-- Kontainer untuk gambar dan teks -->
+    <div class="container">
+        <!-- Bagian untuk gambar -->
+        <div class="image-section">
+            <img src="{{ asset('images/latarbelakangpembukaan.jpg') }}"> 
+        </div>
+        <!-- Bagian untuk teks di atas gambar -->
+        <div class="text-section">
+            <h3>Kelompok 3</h3>
+            <h1>Kaggle Dataset UTBK Soshum 2019</h1>
+            <p>Statistika Komputasi F-081</p>
+            <div class="button-container">
+                <a href="#" class="button">Swipe Up</a>
+            </div>
+        </div>
+    </div>
+    <div class="team-introduction">
         <div class="team-introduction-text">INTRODUCTION OUR</div>
         <div class="team-introduction-text-team">TEAM</div>
         <div class="team-members">
@@ -21,34 +39,37 @@
                 <img src="{{ asset('images/tsabit.png') }}" alt="Photo of {{ $teman1 }}" class="member-photo">
                 <div class="member-info">
                     <h3>{{ $teman1 }}</h3>
-                    <p>NPM: 23081010139</p> <!-- Ganti dengan NPM sebenarnya -->
+                    <p>NPM: 23081010139</p> 
                 </div>
             </div>
             <div class="member">
                 <img src="{{ asset('images/rilla.png') }}" alt="Photo of {{ $teman2 }}" class="member-photo">
                 <div class="member-info"> 
                     <h3>{{ $teman2 }}</h3>
-                    <p>NPM: 23081010206</p> <!-- Ganti dengan NPM sebenarnya -->
+                    <p>NPM: 2308101206</p> 
                 </div>
             </div>
             <div class="member">
                 <img src="{{ asset('images/nuha.png') }}" alt="Photo of {{ $teman3 }}" class="member-photo">
                 <div class="member-info">
                     <h3>{{ $teman3 }}</h3>
-                    <p>NPM: 23081010201</p> <!-- Ganti dengan NPM sebenarnya -->
+                    <p>NPM: 23081010201</p> 
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="main-section-title">DATA</div>
+    <div class="main-section-title-type">SETELAH OUTLIER</div>
     <div class="table-container">
         <table>
             <thead>
                 <tr>
                     <th>Score Geo</th>
-                    <th>Score PPU</th>
-                    <th>Score KPU</th>
+                    <th>Score Ppu</th>
+                    <th>Score Kpu</th>
                     <th>Score Sej</th>
+                    <th>Keterangan</th>
                 </tr>
             </thead>
             <tbody>
@@ -58,13 +79,14 @@
                         <td><?= $data['score_ppu'][$index]; ?></td>
                         <td><?= $data['score_kpu'][$index]; ?></td>
                         <td><?= $data['score_sej'][$index]; ?></td>
+                        <td><?= $data['keterangan'][$index]; ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
             
         </table>
     </div>
-    
+
 <!-- Penyajian Data (Mean, Median, Modus) -->
 <div class="main-section-title">PENGOLAHAN DATA</div>
 <div class="main-section-title-type">MEAN</div>
@@ -162,7 +184,7 @@
 
 </div>
 <div class="main-section-title">DISTRIBUSI FREKUENSI</div>
-<div class="main-section-title-type">KOMULATIF</div>
+<div class="main-section-title-type">RELATIF KOMULATIF</div>
 <div class="frequency-distribution">
     <h3 class="dataname">Score Geo</h3>
     <canvas id="geoChartPercent" class="chart"></canvas>
@@ -328,7 +350,7 @@
         }
     });
 
-    // Cari nilai maksimum dari semua data sej
+// Cari nilai maksimum dari semua data sej
 var maxValue = Math.max(
     Math.max(...{!! json_encode($chart['sej']['data_frek_kom_greater']) !!}),
     Math.max(...{!! json_encode($chart['sej']['data_frek_kom_less']) !!}),
@@ -574,9 +596,11 @@ var kpuChart = new Chart(ctxkpu, {
 });
 
 
-   
+
 </script>
 
+<div class="main-section-title">THANK</div>
+<div class="main-section-title-type">YOU!</div>
 
 
 

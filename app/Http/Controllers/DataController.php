@@ -30,6 +30,7 @@ class DataController extends Controller
          $scoresPPU[] = $item->score_ppu;
          $scoresKPU[] = $item->score_kpu;
          $scoresSej[] = $item->score_sej;
+         $keterangan[] = $item->keterangan;
      }
  
      // Fungsi untuk menghitung varian dan standar deviasi
@@ -298,7 +299,8 @@ $frequencyDistributionsej = array_map(function($range) use ($data) {
              'score_geo' => $scoresGeo, // Mengisi array dengan nilai dari pluck
              'score_ppu' => $scoresPPU,
              'score_kpu' => $scoresKPU,
-             'score_sej' => $scoresSej
+             'score_sej' => $scoresSej,
+             'keterangan' => $keterangan
          ]
      ]);
  }

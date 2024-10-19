@@ -1,11 +1,14 @@
+/*Untuk mengatur keseruruhan bentuk web*/
 body {
     font-family: Arial, sans-serif;
-    background-color: #cccccc;
+    background-color: #b84f17d5;
     margin: 0;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .top-bar {
@@ -17,28 +20,124 @@ body {
     margin-bottom: 20px; /* Spasi bawah dari top bar */
 }
 
+/*Untuk head*/
+/* Kontainer untuk gambar dan teks */
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 2000px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 10px; /* Sudut kontainer dibuat melengkung */
+}
+/* Pengaturan bagian gambar */
+.image-section img {
+    width: 110%;
+    height: auto;
+    border-radius: 10px 10px 0 0; /* Sudut atas gambar dibuat melengkung */
+}
+/* Pengaturan untuk teks di atas gambar */
+.text-section {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    color: rgb(8, 8, 8);
+    text-align: right;
+    text-shadow: 2px 2px 4px rgba(224, 219, 219, 0.7); /* Menambahkan bayangan teks agar lebih terbaca */
+}
+/* Tulisan */
+.text-section h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.text-section h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 10px 0;
+}
+.text-section p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+/* Pengaturan untuk tombol swipe up */
+.button-container {
+    margin-top: 20px;
+}
+.button {
+    background-color: #f7c83e; /* Warna tombol */
+    color: black;
+    padding: 15px 30px;
+    text-decoration: none; 
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 5px; 
+    transition: all 0.3s ease; /* Efek transisi  */
+}
+.button:hover {
+    background-color: #e6b732; /* Warna saat tombol di-hover */
+}
+/* Tanda panah di bawah tombol */
+.button-container::after {
+    content: '▲▲▲';
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 10px;
+    color: #f7c83e;
+}
+/* Penyesuaian tampilan untuk layar yang lebih kecil */
+@media (max-width: 768px) {
+    .text-section {
+        top: 15%;
+        right: 2%;
+    }
+    .text-section h1 {
+        font-size: 2.5rem;
+    }
+    .button {
+        padding: 10px 20px;
+    }
+}
+/* Head selesai */
+
+/*Untuk menampilkan data yang tidak outlier*/
+/*Untuk mengatur bentuk tabel*/
 .table-container {
-    width: 80%; /* Atur lebar tabel sesuai kebutuhan */
-    max-height: 400px; /* Atur tinggi maksimum sesuai kebutuhan */
+    width: 80%; /* Atur lebar tabel */
+    max-height: 400px; /* Atur tinggi maksimum*/
     overflow-y: auto; /* Menambahkan scroll vertikal jika konten melebihi tinggi */
-    border: 10px solid #ccc; /* Tambahkan border jika perlu */
+    border: 10px solid #edd2b4; /* Tambahkan border*/
     margin-bottom: 100px;
 }
-
-table {
-    background-color: #ffffff; /* Latar belakang tabel putih */
-    width: 100%; /* Atur lebar tabel */
-    border-collapse: collapse; /* Menghapus jarak antara border sel */
+/*Untuk mengatur judul kolom dari tabel*/
+.table-container th {
+    background-color: #eac285;
+    color: #ffffff; /* Warna teks */
+    padding: 10px; /* Spasi dalam sel judul */
+    text-align: center; /* Penyesuaian teks*/
+    position: sticky; /* Membuat posisi header tetap */
+    top: 0; /* Menetapkan jarak dari atas */
+    z-index: 1;
 }
 
+
+/*Untuk mengatur gaya dari tabel*/
+table {
+    background-color: #ffffff; 
+    width: 100%; /* lebar tabel */
+    border-collapse: collapse; /* Menghapus jarak antara border sel */
+}
+/*Untuk mengatur sel dari tabel*/
 th, td {
-    background-color: #ffffff; /* Latar belakang setiap sel */
+    background-color: #ffffff;
     padding: 10px; /* Spasi dalam sel */
     text-align: left; /* Penyesuaian teks */
     border: 1px solid #ddd; /* Border pada sel */
 }
 
-
+/*Untuk mengatur warna teks h2 dan h3*/
 h2, h3 {
     color: #007bff;
 }
@@ -87,12 +186,12 @@ canvas {
 }
 
 .chart {
-    width: 1500px; /* Atur lebar sesuai keinginan */
-    height: 700px; /* Atur tinggi sesuai keinginan */
+    width: 1500px; /* Atur lebar */
+    height: 700px; /* Atur tinggi */
     margin: 10px auto; /* Margin atas/bawah 10px dan tengah secara horizontal */
-    border: 2px solid #007bff; /* Border jika perlu */
+    border: 2px solid #007bff; 
     border-radius: 8px; /* Sudut membulat */
-    background-color: #ffffff; /* Warna latar belakang */
+    background-color: #ffffff; 
 }
 
 .frequency-distribution {
@@ -100,108 +199,108 @@ canvas {
     padding: 10px; /* Memberikan ruang di dalam div */
     border: 1px solid #007bff; /* Border untuk div */
     border-radius: 8px; /* Sudut membulat */
-    background-color: #f9f9f9; /* Warna latar belakang */
+    background-color: #f9f9f9; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
 }
 
-.team-introduction { /* Dark background for the introduction section */
-    padding: 20px; /* Padding for spacing */
-    border-radius: 20px; /* Rounded corners */
-    color: #ffffff; /* White text color */
-    text-align: center; /* Center text */
-    margin-bottom: 20px; /* Margin below the section */
+.team-introduction {
+    padding: 20px; 
+    border-radius: 20px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .team-introduction-text {
     font-size: 50px;
     font-weight: 700;
-    color: #ffd369; /* Space below the title */
+    color: #ffd369;
 }
 .team-introduction-text-team {
     font-size: 80px;
     font-weight: 700;
     color: #000000;
-    margin-bottom: 20px; /* Space below the title */
+    margin-bottom: 20px;
 }
 
 .team-members {
     display: flex;
-    flex-direction: row; /* Row for horizontal layout */
-    justify-content: center; /* Center the members */
-    flex-wrap: wrap; /* Allow wrapping if there's not enough space */
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .member {
     display: flex;
-    flex-direction: column; /* Arrange photo above name and NPM */
-    align-items: center; /* Center the items horizontally */
-    background-color: #ffffff; /* White background for member cards */
-    border-radius: 8px; /* Rounded corners for member cards */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff; 
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
     padding: 10px;
-    margin: 12px; /* Space between members */
-    width: 300px; /* Width of member cards */
+    margin: 12px;
+    width: 300px;
 }
 
 .member-photo {
-    width: 200px; /* Photo width */
-    height: 200px; /* Photo height */
-    border-radius: 10%; /* Round photo */
-    margin-bottom: 10px; /* Space between photo and info */
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    margin-bottom: 10px;
 }
 
 .member-info h3 {
-    margin: 0; /* Remove default margin */
-    color: #000000; /* Name color */
+    margin: 0;
+    color: #000000;
 }
 
 .member-info p {
-    margin: 8px 0 0; /* Margin for NPM */
-    color: #000000; /* NPM color */
+    margin: 8px 0 0;
+    color: #000000;
 }
 .section-title {
-    color: #007bff; /* Color for the section titles */
-    margin: 20px 0 10px; /* Margin around the title */
-    font-size: 1.5em; /* Font size for titles */
-    text-align: center; /* Center-align titles */
+    color: #007bff;
+    margin: 20px 0 10px;
+    font-size: 1.5em;
+    text-align: center;
 }
 .main-section-title {
     font-size: 50px;
     font-weight: 550;
-    color: #000000; /* Color for the section titles */
+    color: #000000;
     text-align: center;
-    margin-top: 50px; /* Center-align titles */
+    margin-top: 50px;
 }
 .main-section-title-type {
     font-size: 70px;
     font-weight: 550;
-    color: #ffd369; /* Color for the section titles */
+    color: #ffd369;
     text-align: center;
-    margin-bottom: px; /* Center-align titles */
+    margin-bottom: px;
 }
 
 .data-row {
-    display: flex; /* Display items in a row */
-    justify-content: space-around; /* Space evenly between items */
-    margin-bottom: 30px; /* Space below each data row */
-    padding: 15px; /* Padding inside data row */
-    background-color: #f9f9f9; /* Light background color */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .data-item {
-    padding: 10px; /* Padding for data items */
-    margin: 0 5px; /* Margin between items */
-    text-align: center; /* Center text in each item */
-    border: 1px solid #ffd369; /* Border color */
-    border-radius: 5px; /* Rounded corners for each item */
-    background-color: #ffffff; /* White background for data items */
+    padding: 10px;
+    margin: 0 5px;
+    text-align: center;
+    border: 1px solid #ffd369;
+    border-radius: 5px;
+    background-color: #ffffff;
 }
 
 .data-item:hover {
-    background-color: #e7f1ff; /* Light blue on hover for interactivity */
-    cursor: pointer; /* Change cursor on hover */
+    background-color: #e7f1ff;
+    cursor: pointer;
 }
 .dataname{
     text-align: center;
@@ -209,9 +308,9 @@ canvas {
 
 }
 .image-handler {
-    display: block; /* Agar gambar dianggap sebagai elemen blok */
-    max-width: 100%; /* Maksimal lebar gambar 100% dari elemen induk */
-    height: auto; /* Pertahankan rasio aspek gambar */
-    margin: 20px auto; /* Pusatkan gambar secara horizontal dan berikan margin atas-bawah */
-    border-radius: 10px; /* Tambahkan sudut membulat jika diinginkan */
+    display: block;
+    max-width: 100%; 
+    height: auto; 
+    margin: 20px auto; 
+    border-radius: 10px;
 }
